@@ -1,0 +1,168 @@
+html {
+	font-family: Calibri, Arial, sans-serif;
+	line-height: 1.5;
+	background: #000;
+	color: #eee;
+}
+body {
+	background: #222;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+footer {
+	background: #000;
+	margin: 4em 0 15em 0;
+}
+	footer hr {
+		display: none;
+	}
+
+.inner {
+	max-width: 50em;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+article .inner,
+section .inner {
+	padding-top: 0;
+	overflow: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Ubuntu, Georgia, serif;
+	font-weight: normal;
+}
+
+ul, ol {
+	padding-left: 2em;
+}
+
+li {
+	padding-left: 0.5em;
+}
+
+.list-inline {
+	margin: 1em 0;
+	padding: 0;
+	list-style: none;
+}
+.list-inline > li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+.list-inline > li:not(:first-child)::before {
+	content: "•";
+	margin: 0 0.5em;
+}
+
+.list-inline-spacious > li:not(:first-child)::before {
+	content: "•";
+	margin: 0 1em;
+}
+
+a {
+	color: #39f;
+	text-decoration: underline;
+	transition: 0.2s;
+}
+
+a:hover,
+a:focus,
+a:active {
+	position: relative;
+	background: #39f;
+	color: #222;
+	padding: 0.2em;
+	margin: 0 -0.2em;
+	outline: none;
+}
+
+:target {
+	box-shadow: 0 0 0.4em #f90;
+	box-shadow: 0 0 0.4em 0.2em #f90;
+}
+
+pre,
+:not(pre) > code {
+	color: #eee;
+	background: #333;
+	padding: 0.1em 0.3em;
+	border: 1px solid #666;
+	border-radius: 0.3em;
+}
+pre {
+	padding: 0.8em;
+	white-space: pre-wrap;
+}
+
+
+table {
+	border-collapse: collapse;
+}
+
+th {
+	background: #333;
+}
+
+td, th {
+	padding: 0.3em 0.5em;
+	text-align: left;
+	border: 1px solid #666;
+}
+
+figure {
+	display: block;
+}
+@media (max-width: 30em) {
+	figure {
+		margin: 1em -1em;
+	}
+}
+	figure img {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+		box-shadow: 0 0 0.5em #000;
+	}
+
+.heading-link {
+	text-decoration: none;
+	opacity: 0.5;
+}
+	.heading-link:hover,
+	.heading-link:focus,
+	.heading-link:active,
+	:target .heading-link {
+		opacity: 1;
+	}
+
+.metadata {
+	margin-top: 2em;
+	font-size: 0.9em;
+	list-style: none;
+	padding: 0;
+}
+
+.logo {
+	color: #fff !important;
+	text-decoration: none;
+	text-shadow:
+		0 0 0.1em #fc0,
+		-0.2em 0.2em 0.3em #fff,
+		0.1em 0.1em 0.5em #fff,
+		0 0 1em #fff;
+}
+
+	h1 .logo {
+		font-size: 0.6em;
+	}
+
+.alert {
+	background: #245;
+	padding: 1em;
+}

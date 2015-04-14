@@ -1,0 +1,32 @@
+---
+title: Tags
+---
+
+<h1>Tags</h1>
+
+{% assign sortedtags = (site.tags | sort:0) %}
+<ul class="list-inline">
+	{% for tag in sortedtags %}
+		<li>
+			<a href="#tag-{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+		</li>
+	{% endfor %}
+</ul>
+
+<hr />
+
+{% for tag in sortedtags %}
+	<h2 id="tag-{{ tag[0] | slugify }}">
+		<a href="#tag-{{ tag[0] | slugify }}" class="heading-link">§</a> {{ tag[0] }}
+	</h2>
+	{% assign sortedposts = (tag[1] | sort: 'title', 'last') %}
+	<ul>
+		{% for post in sortedposts %}
+			{% unless post.isOriginal %}
+				<li>
+					<a href="{{ post.url }}">{{ post.title }}</a>
+				</li>
+			{% endunless %}
+		{% endfor %}
+	</ul>
+{% endfor %}

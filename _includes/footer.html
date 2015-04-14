@@ -1,0 +1,13 @@
+<footer>
+	<div class="inner">
+		<hr />
+		<ul class="list-inline list-inline-spacious">
+			{% if page.date %}
+			<li><datetime itemprop="dateCreated" datetime="{{page.date | date: "%F" }}">{{ page.date | date: "%-d %B %Y" }}</datetime></li>
+			{% endif %}
+			{% if page.includeWordCount %}
+			<li itemprop="wordCount">{{ page.content | number_of_words }} words</li>
+			{% endif %}
+		</ul>
+	</div>
+</footer>
