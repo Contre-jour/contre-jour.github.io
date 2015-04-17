@@ -14,5 +14,5 @@ googleSiteVerification: _v0CgoEkdDkOm6hQZWuOA8e3OIofyjfSHvvus6iqq-8
 </ul>
 
 <p>
-	<a href="{{ site.url }}/tags.html">List of tags</a>
+	<a href="{{ site.url }}/tags/">List of tags</a>
 </p>

@@ -11,7 +11,7 @@ includeWordCount: true
 	<div class="inner">
 		{% if page.isOriginal %}
 			<div class="alert">
-				There is an <a href="{{ site.url }}{{ page.id | replace:'-original' }}.html" itemprop="sameAs">updated version</a> of this blog post.
+				There is an <a href="{{ site.url }}{{ page.id | replace:'-original' }}/" itemprop="sameAs">updated version</a> of this blog post.
 			</div>
 		{% endif %}
 
@@ -24,13 +24,13 @@ includeWordCount: true
 				<li>
 					Tags:
 					{% for tag in page.tags %}
-						<a href="{{ site.url }}/tags.html#tag-{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last %},{% endunless %}
+						<a href="{{ site.url }}/tags/#tag-{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last %},{% endunless %}
 					{% endfor %}
 				</li>
 			{% endif %}
 			{% if page.hasOriginal %}
 				<li>
-					This blog post has been updated, see also the <a href="{{ site.url }}{{ page.id }}-original.html" itemprop="sameAs">original version</a>
+					This blog post has been updated, see also the <a href="{{ site.url }}{{ page.id }}-original/" itemprop="sameAs">original version</a>
 				</li>
 			{% endif %}
 		</ul>
