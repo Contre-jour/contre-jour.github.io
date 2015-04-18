@@ -14,9 +14,8 @@ includeWordCount: true
 				There is an <a href="{{ site.url }}{{ page.id | replace:'-original' }}/" itemprop="sameAs">updated version</a> of this blog post.
 			</div>
 		{% endif %}
-
-		{% capture root %}{{ site.url }}/{% endcapture %}
-		{% capture assetRoot %}{{ site.url }}/assets/{{ page.path | replace:'_posts/' | replace:'-original.md' | replace:'.md' }}/{% endcapture %}
+		{% assign root = site.url | append:'/' %}
+		{% assign assetRoot = site.url | append:site.url | append:'/assets/' | append:page.path | replace:'/_posts/','/' | replace:'.md','/' %}
 		{{ content | replace:'%7E/',root | replace:'%7Eassets/',assetRoot | replace: '<p>&lt; figure&gt;','<figure>' | replace: '</figure></p>','</figure>' }}
 
 		<ul class="metadata">
