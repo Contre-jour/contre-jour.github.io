@@ -3,7 +3,7 @@
 		<hr />
 		<ul class="list-inline list-inline-spacious">
 			{% if page.date %}
-			<li><datetime itemprop="dateCreated" datetime="{{page.date | date: "%F" }}">{{ page.date | date: "%-d %B %Y" }}</datetime></li>
+			<li><time itemprop="dateCreated" datetime="{{page.date | date: "%F" }}">{{ page.date | date: "%-d %B %Y" }}</time></li>
 			{% endif %}
 			{% if page.includeWordCount %}
 			<li itemprop="wordCount">{{ page.content | number_of_words }} words</li>

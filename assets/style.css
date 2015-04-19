@@ -158,7 +158,11 @@ figure {
 		0 0 1em #fff;
 }
 
-	h1 .logo {
+	nav h1 {
+		font-size: 1.2em;
+	}
+
+	a h1 .logo {
 		font-size: 0.6em;
 	}
 
