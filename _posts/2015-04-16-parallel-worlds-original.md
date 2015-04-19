@@ -1,7 +1,7 @@
 ---
 title: Parallel worlds
 tags: [philosophy, psychology, perception]
-hasOriginal: true
+isOriginal: true
 ---
 
 # Parallel worlds
@@ -38,5 +38,3 @@ Here are a few other differences that I know a lot less about:
 Perhaps having empathy for others (the first item in the list) even makes all of this uninteresting, because it comes naturally. Since I'm more on the self-absorbed side, these are highly relevant questions to me, and one of the takeaways is to be really careful about judging others. A saying that comes to mind is that you shouldn't judge others because you don't know what they've gone through, but that might even be an understatement: their world may be fundamentally different. That doesn't mean that anybody gets a pass on dealing with their problems, but you need to understand that more or less difficult.
 
 Life choices we make are still largely unaccounted for in my worldview difference list above: profession, interests and habits will also change your perspective.
-
-{% include series-parallel-worlds.html part=1 %}

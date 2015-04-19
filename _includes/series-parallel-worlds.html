@@ -1,0 +1,11 @@
+<div class="alert">
+	This post is part of the <em>parallel worlds</em> article series.
+	{% capture list %}
+	<ul class="list-inline">
+		<li><a href="{% post_url 2015-04-16-parallel-worlds %}">Part 1</a></li>
+		<li><a href="{% post_url 2015-04-19-parallel-worlds-part-2 %}">Part 2</a></li>
+	</ul>
+	{% endcapture %}
+	{% assign link = '<a href="' | append:page.url | append:'">Part ' | append:include.part | append:'</a>' %}
+	{{ list | replace:link,'<strong>Part XXX</strong>' | replace:'XXX',include.part }}
+</div>
