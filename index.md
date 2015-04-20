@@ -1,18 +1,12 @@
 ---
-title: Miniblog
+title: Contre-jour
 googleSiteVerification: _v0CgoEkdDkOm6hQZWuOA8e3OIofyjfSHvvus6iqq-8
 ---
 
-<ul>
-	{% for post in site.posts %}
-		{% unless post.isOriginal %}
-			<li>
-				<a href="{{ post.url }}">{{ post.title }}</a>
-			</li>
-		{% endunless %}
-	{% endfor %}
-</ul>
+{% assign posts = site.posts | where:'isOriginal',false %}
 
-<p>
-	<a href="{{ site.url }}/tags/">List of tags</a>
-</p>
+{% for post in posts %}
+* [{{ post.title }}]({{ post.url }}){% endfor %}
+
+
+[List of tags]({{ site.url }}/tags/)
