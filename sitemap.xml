@@ -1,0 +1,30 @@
+---
+layout:
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	{% assign root = 'https://contre-jour.github.io' %}
+
+	<url>
+		<loc>{{ root }}/</loc>
+		<priority>1.0</priority>
+		<changefreq>daily</changefreq>
+	</url>
+
+	<url>
+		<loc>{{ root }}/tags/</loc>
+		<priority>0.4</priority>
+		<changefreq>daily</changefreq>
+	</url>
+
+	{% for post in site.posts %}
+		<url>
+			<loc>{{ root }}{{ post.url }}</loc>
+			{% if post.isOriginal %}
+				<priority>0.1</priority>
+			{% else %}
+				<priority>0.6</priority>
+			{% endif %}
+		</url>
+	{% endfor %}
+</urlset>
